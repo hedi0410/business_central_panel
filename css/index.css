@@ -1,0 +1,94 @@
+#menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border: 2px solid lightgrey;
+    gap: 2%;
+    border-radius: 20px;
+}
+#homeMessage {
+    text-align: center;
+}
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 2.5%;
+
+    border: solid 2px lightgrey;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 20px;
+}
+#left, #right {
+    border: solid 2px;
+    border-radius: 20px;
+    margin: 0px;
+}
+#left {
+    padding: 5px;
+}
+#right {
+    padding: 10px;
+}
+#center {
+    border: 2px solid lightgrey;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    min-width: 50%;
+    max-width: 60%;
+
+    font-size: 18px;
+}
+#stats {
+    font-size: 18px;
+}
+#navigation ul {
+    text-align: center;;
+    list-style: none;
+    list-style-position: outside;
+    padding: 5px;
+    margin: 5px;
+}
+#navigation li {
+    margin-bottom: 5px;
+}
+#navigation button {
+    border-radius: 5px;
+    border: 2px lightgrey;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+#moneyText {
+    color: green;
+}
+
+/* Clock & date */
+#clock, #date {
+    display: block;
+    font-weight: normal;
+    /*margin: 0 auto; /* center horizontally *//*
+    text-align: center;*/
+    padding: 1px;
+    /*width: fit-content;*/
+}
+#clock {
+    font-size: 16px;
+}
+
+#date {
+    font-size: 16px;
+}
+#buttonNav5 {
+    display: none;
+}
+#buttonNav6 {
+    display: none;
+}
+#changeName {
+    margin-left: 15px;
+}
