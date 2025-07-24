@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Project 10</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/businesses.css">
+</head>
+<body>
+    <header><h2>Businesses</h2></header>
+
+<div class="container">
+    <div id="businessesOwned">
+        <h3>Owned Businesses</h3>
+        <div class="selector">
+        <label for="businessSelector"></label>
+        <select name="businessSelector" id="businessSelector">
+            <option value=""></option>
+            <option value="0" id="businessSelectorOption0"></option>
+        </select>
+        </div>
+    </div>
+    <div id="businessesForSale">
+        <h3>Businesses For Sale</h3>
+        <div class="selector">
+        <label for="businessSelector2"></label>
+        <select name="businessSelector2" id="businessSelector2">
+            <option value=""></option>
+            <option value="0" id="businessSelector2Option0"></option>
+        </select>
+        </div>
+    </div>
+    <div id="overviewOwned">
+        <h3>Business Overview</h3>
+        <div id="overviewStats">
+        <strong><span id="stat">Name: </strong><span id="businessNameText"></span></span><br>
+        <strong><span id="stat">Type: </strong><span id="businessTypeText"></span></span><br>
+        <strong><span id="stat">Price: $</strong><span id="businessPriceText"></span></span><br>
+        <h3>Per Hour</h3>
+        <strong><span id="stat">Revenue: $</strong><span id="businessRevenueText"></span></span><br>
+        <strong><span id="stat">Expenses: $</strong><span id="businessExpensesText"></span></span><br>
+        <strong><span id="stat">Profit: $</strong><span id="businessProfitText"></span></span><br>
+        </div>
+        <br>
+        <button id="goBusinessButton1">See the Business</button>
+    </div>
+    <div id="overviewForSale">
+        <h3>Business Overview</h3>
+        <div id="overviewStats2">
+        <strong><span id="stat">Name: </strong><span id="businessNameText2"></span></span><br>
+        <strong><span id="stat">Type: </strong><span id="businessTypeText2"></span></span><br>
+        <strong><span id="stat">Price: $</strong><span id="businessPriceText2"></span></span><br>
+        <h3>Per Hour</h3>
+        <strong><span id="stat">Revenue: $</strong><span id="businessRevenueText2"></span></span><br>
+        <strong><span id="stat">Expenses: $</strong><span id="businessExpensesText2"></span></span><br>
+        <strong><span id="stat">Profit: $</strong><span id="businessProfitText2"></span></span><br>
+        </div>
+        <br>
+        <button id="goBusinessButton2">Buy the Business</button>
+    </div>
+</div>
+</body>
+</html>
