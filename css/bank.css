@@ -1,0 +1,25 @@
+header {
+    text-align: center;
+}
+#statBalance {
+    font-size: 30px;
+}
+.container {
+    border: solid 2px lightgrey;
+    border-radius: 15px;
+    gap: 20px;
+    justify-items: space-between;
+    padding: 10px;
+    margin: 10px;
+}
+#buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+}
+#buttons button {
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 5px;
+}

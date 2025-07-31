@@ -28,9 +28,9 @@ goHome();
 
 buttonNav1.onclick = () => loadSection('home');
 buttonNav2.onclick = () => loadSection('businesses');
-/*buttonNav3.onclick = () => loadSection('real_estate');
+//buttonNav3.onclick = () => loadSection('real_estate');
 buttonNav4.onclick = () => loadSection('bank');
-buttonNav5.onclick = () => loadSection('mail');
+/*buttonNav5.onclick = () => loadSection('mail');
 buttonNav6.onclick = () => loadSection('assets');*/
 
 changeName.onclick = () => changePlayerName();

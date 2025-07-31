@@ -8,6 +8,7 @@ export class Player {
         this.interest = 0;
         this.profit = 0;
         this.bank = "Wood&Steel Bank";
+        this.bankMoney = 0;
         this.businesses = [];
         this.currentBusiness;
         this.properties = [];
