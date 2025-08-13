@@ -83,11 +83,14 @@
 #date {
     font-size: 16px;
 }
+#buttonNav3 {
+    display: none;
+}
 #buttonNav5 {
     display: none;
 }
 #buttonNav6 {
-    display: none;
+    display: inline-block;
 }
 #changeName {
     margin-left: 15px;

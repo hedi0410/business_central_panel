@@ -51,5 +51,9 @@ export class Player {
     showProperties() {
         return this.properties.map(p => p.name).join(', ');
     }
+
+    showAssets() {
+        return this.assets.map(a => a.name).join(', ');
+    }
 }
 

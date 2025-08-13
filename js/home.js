@@ -9,6 +9,7 @@ const profitText = document.getElementById('profitText');
 
 const businessesText = document.getElementById('businessesText');
 const propertiesText = document.getElementById('propertiesText');
+const assetsText = document.getElementById('assetsText');
 
 autoUpdateStatsHome();
 
@@ -23,6 +24,7 @@ function updateStatsHome() {
     showProfit();
     businessesText.innerText = player.showBusinesses();
     propertiesText.innerText = player.showProperties();
+    assetsText.innerText = player.showAssets();
 }
 
 function autoUpdateStatsHome() {
