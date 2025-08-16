@@ -1,4 +1,4 @@
-import { player, game, updateStats, loadSection, immortal, catcoffee } from './index.js';
+import { player, game, updateStats, loadSection, immortal, catcoffee, renaissance, beyond, deluxo, n2n, cloudPush } from './index.js';
 
 const goBusinessButton1 = document.getElementById('goBusinessButton1');
 const goBusinessButton2 = document.getElementById('goBusinessButton2');
@@ -75,12 +75,14 @@ function goBusinesses() {
 }
 
 function buyBusiness(index) {
-    player.businesses.push(game.businesses[index]);
-    game.businesses[index].money = 0;
-    player.spendMoney(game.businesses[index].returnPrice());
-    game.businesses.splice(selectedBusiness, 1);
-    updateStats();
-    goBusinesses();
+    if (player.money >= game.businesses[index].returnPrice()) {
+        player.businesses.push(game.businesses[index]);
+        game.businesses[index].money = 0;
+        player.spendMoney(game.businesses[index].returnPrice());
+        game.businesses.splice(selectedBusiness, 1);
+        updateStats();
+        goBusinesses();
+    }
 }
 
 // buying via name

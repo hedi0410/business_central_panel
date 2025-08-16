@@ -20,10 +20,20 @@ export const game = new Player("Game");
 
 // businesses
 export const immortal = new Business("The Immortal", "Bar", 10000);
-export const catcoffee = new Business("The Cat Coffee", "Bar", 39000);
+export const catcoffee = new Business("The Cat Coffee", "Bar", 19000);
+export const renaissance = new Business("The Renaissance", "Nightclub", 39000);
+export const beyond = new Business("Beyond Delivery", "Delivery Service", 84000);
+export const deluxo = new Business("Deluxo Jeans", "Clothing Brand", 268000);
+export const n2n = new Business("N2N Corporation", "Trading", 780000);
+export const cloudPush = new Business("Cloud Push", "Import/Export", 10000000);
 
 game.businesses.push(immortal);
 game.businesses.push(catcoffee);
+game.businesses.push(renaissance);
+game.businesses.push(beyond);
+game.businesses.push(deluxo);
+game.businesses.push(n2n);
+game.businesses.push(cloudPush);
 
 autoUpdateStats();
 goHome();
@@ -68,6 +78,24 @@ function generateMoney() {
     }
     if (player.businesses[1]) {
     player.businesses[1].money += player.businesses[1].returnProfit() / 3600;
+    }
+    if (player.businesses[2]) {
+    player.businesses[2].money += player.businesses[2].returnProfit() / 3600;
+    }
+    if (player.businesses[3]) {
+    player.businesses[3].money += player.businesses[3].returnProfit() / 3600;
+    }
+    if (player.businesses[4]) {
+    player.businesses[4].money += player.businesses[4].returnProfit() / 3600;
+    }
+    if (player.businesses[5]) {
+    player.businesses[5].money += player.businesses[5].returnProfit() / 3600;
+    }
+    if (player.businesses[6]) {
+    player.businesses[6].money += player.businesses[6].returnProfit() / 3600;
+    }
+    if (player.businesses[7]) {
+    player.businesses[7].money += player.businesses[7].returnProfit() / 3600;
     }
 }
 

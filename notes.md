@@ -1,8 +1,7 @@
 To add: 
 
-Scalable Business buying/selling system
 Money loop linked to real time
-Save game 
+Save game
 
 Human readable money (commas, Ms)
 Better layout
