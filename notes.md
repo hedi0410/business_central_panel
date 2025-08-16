@@ -1,7 +1,9 @@
 To add: 
 
-Money loop linked to real time
-Save game
+Fluctuations with the assets.
+
+Money loop linked to real time.
+A save game function.
 
 Human readable money (commas, Ms)
 Better layout
@@ -22,17 +24,3 @@ Ideas:
 
 Bank :
 Unlocking a better bank will give you better interest rates on loans and savings.
-
-Businesses: 
-
-Taxi
-Nightclub
-Music studio
-Game studio
-Bar
-Convenience store
-Store
-Garage
-Car dealership
-Restaurant
----------
