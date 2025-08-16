@@ -65,7 +65,7 @@ function nextBusinessSale() {
 }
 
 function goMainBusiness() {
-    if (player.currentBusiness !== -1) {
+    if (player.businesses[0]) {
         loadSection('mainBusiness');
     }
 }

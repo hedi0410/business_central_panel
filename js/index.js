@@ -72,6 +72,7 @@ function goHome() {
     loadSection('home');
 }
 
+// pretty repetitive but couldn't figure out a better way
 function generateMoney() {
     if (player.businesses[0]) {
     player.businesses[0].money += player.businesses[0].returnProfit() / 3600;

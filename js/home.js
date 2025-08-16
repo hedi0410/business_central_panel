@@ -17,6 +17,11 @@ autoUpdateStatsHome();
 // updates
 function updateStatsHome() {
     moneyText.innerText = Number(player.money.toFixed(2));
+    if (player.money < 0) {
+            moneyText.style.color = "red";
+        } else {
+            moneyText.style.color = "green";
+        }
     revenueText.innerText = player.returnRevenue();
     expensesText.innerText = player.returnExpenses();
     debtText.innerText = player.returnDebt();

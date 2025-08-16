@@ -1,3 +1,8 @@
+body {
+    background-color: #010f22;
+    font-family: 'Rajdhani', sans-serif;
+    color: white;
+}
 #menu {
     display: flex;
     justify-content: center;
@@ -6,6 +11,13 @@
     border: 2px solid lightgrey;
     gap: 2%;
     border-radius: 20px;
+}
+#bigHeader {
+    color: #eb2646;
+    padding-left: 20%;
+}
+a {
+    color: white;
 }
 #homeMessage {
     text-align: center;
@@ -58,10 +70,12 @@
 }
 #navigation button {
     border-radius: 5px;
-    border: 2px lightgrey;
+    border: 2px #b6e5ee;
     padding: 5px;
     font-size: 16px;
     font-weight: bold;
+    color: #b6e5ee;
+    background-color: #a80d27;
 }
 #moneyText {
     color: green;
