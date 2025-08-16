@@ -20,8 +20,10 @@ export const game = new Player("Game");
 
 // businesses
 export const immortal = new Business("The Immortal", "Bar", 10000);
+export const catcoffee = new Business("The Cat Coffee", "Bar", 39000);
 
 game.businesses.push(immortal);
+game.businesses.push(catcoffee);
 
 autoUpdateStats();
 goHome();
