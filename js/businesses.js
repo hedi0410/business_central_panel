@@ -75,13 +75,15 @@ function goBusinesses() {
 }
 
 function buyBusiness(index) {
-    if (player.money >= game.businesses[index].returnPrice()) {
-        player.businesses.push(game.businesses[index]);
-        game.businesses[index].money = 0;
-        player.spendMoney(game.businesses[index].returnPrice());
-        game.businesses.splice(selectedBusiness, 1);
-        updateStats();
-        goBusinesses();
+    if (game.businesses[index]) {
+        if (player.money >= game.businesses[index].returnPrice()) {
+            player.businesses.push(game.businesses[index]);
+            game.businesses[index].money = 0;
+            player.spendMoney(game.businesses[index].returnPrice());
+            game.businesses.splice(selectedBusiness, 1);
+            updateStats();
+            goBusinesses();
+        }
     }
 }
 
