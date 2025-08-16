@@ -66,6 +66,9 @@ function generateMoney() {
     if (player.businesses[0]) {
     player.businesses[0].money += player.businesses[0].returnProfit() / 3600;
     }
+    if (player.businesses[1]) {
+    player.businesses[1].money += player.businesses[1].returnProfit() / 3600;
+    }
 }
 
 export function returnMoney() {
