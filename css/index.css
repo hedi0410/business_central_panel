@@ -101,7 +101,7 @@ a {
     display: none;
 }
 #buttonNav5 {
-    display: none;
+    display: inline-block;
 }
 #buttonNav6 {
     display: inline-block;

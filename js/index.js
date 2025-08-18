@@ -42,7 +42,7 @@ buttonNav1.onclick = () => loadSection('home');
 buttonNav2.onclick = () => loadSection('businesses');
 //buttonNav3.onclick = () => loadSection('realEstate');
 buttonNav4.onclick = () => loadSection('bank');
-//buttonNav5.onclick = () => loadSection('mail');
+buttonNav5.onclick = () => loadSection('personalAssets');
 buttonNav6.onclick = () => loadSection('assets');
 
 changeName.onclick = () => changePlayerName();

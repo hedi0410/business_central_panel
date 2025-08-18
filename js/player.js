@@ -12,8 +12,8 @@ export class Player {
         this.businesses = [];
         this.currentBusiness;
         this.properties = [];
+        this.personalAssets = [];
         this.assets = [];
-        this.mail = [];
     }
 
     addMoney(amount) {
@@ -54,6 +54,10 @@ export class Player {
 
     showAssets() {
         return this.assets.map(a => a.name).join(', ');
+    }
+
+    showPersonalAssets() {
+        return this.personalAssets.map(p => p.name).join(', ');
     }
 }
 
