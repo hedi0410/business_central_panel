@@ -1,8 +1,8 @@
 # Business Central Panel
 A game simulating a central panel to manage your businesses.
 
+Multiple businesses are available for purchase, as well as real estate properties and assets.
 It is playable in a browser with a web server.
-The business buying/selling systems are not scalable, and only one business (The Immortal Bar) is available for purchase.
 
 I made this project to learn the fundamentals of javascript.
 
