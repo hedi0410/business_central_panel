@@ -20,7 +20,7 @@ update(index);
 
 function update(index) {
     assetNameText.innerText = assets[index].name;
-    priceText.innerText = assets[index].price;
+    priceText.innerText = assets[index].price.toFixed(2);
     text.innerText = assets[index].text;
     checkOwnership();
     updateStats();

@@ -63,6 +63,7 @@ function autoUpdateStats() {
     updateStats();
     setInterval(function(){
         generateMoney();
+        assetFluctuation();
         updateStats();
     }, 1000);
 }
@@ -72,6 +73,7 @@ function goHome() {
     loadSection('home');
 }
 
+// money
 function generateMoney() {
     for (let i = 0; i < player.businesses.length; i++) {
         if (player.businesses[i]) {
@@ -82,6 +84,13 @@ function generateMoney() {
 
 export function returnMoney() {
     return player.money;
+}
+
+function assetFluctuation() {
+    let randNum = Math.random() < 0.51 ? 1 : -1; //it means 50% to be 1 or -1
+    for (let i = 0; i < player.assets.length; i++) {
+        player.assets[i].price += player.assets[i].price * 0.001 * randNum;
+    }
 }
 
 // Section management
