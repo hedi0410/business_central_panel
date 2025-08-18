@@ -7,6 +7,7 @@ const buttonNav3 = document.getElementById('buttonNav3');
 const buttonNav4 = document.getElementById('buttonNav4');
 const buttonNav5 = document.getElementById('buttonNav5');
 const buttonNav6 = document.getElementById('buttonNav6');
+const buttonNav7 = document.getElementById('buttonNav7');
 const changeName = document.getElementById('changeName');
 
 const moneyText = document.getElementById('moneyText');
@@ -44,12 +45,13 @@ buttonNav3.onclick = () => loadSection('realEstate');
 buttonNav4.onclick = () => loadSection('bank');
 buttonNav5.onclick = () => loadSection('personalAssets');
 buttonNav6.onclick = () => loadSection('assets');
+buttonNav7.onclick = () => loadSection('help');
 
 changeName.onclick = () => changePlayerName();
 
 // updates 
 export function updateStats() {
-    moneyText.innerText = Number(player.money.toFixed(2));
+    moneyText.innerText = formatNumber(player.money.toFixed(2));
     if (player.money < 0) {
         moneyText.style.color = "red";
     } else {
@@ -92,6 +94,10 @@ function assetFluctuation() {
     for (let i = 0; i < player.assets.length; i++) {
         player.assets[i].price += player.assets[i].price * 0.001 * randNum;
     }
+}
+
+export function formatNumber(n) {
+    return new Intl.NumberFormat('us-US').format(n);
 }
 
 // Section management

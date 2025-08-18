@@ -1,4 +1,4 @@
-import { player, updateStats } from './index.js';
+import { player, updateStats, formatNumber } from './index.js';
 import { properties } from './properties.js';
 
 const buttonAssets1 = document.getElementById('buttonAssets1');
@@ -22,9 +22,9 @@ update(index);
 
 function update(index) {
     propertyNameText.innerText = properties[index].name;
-    revenueText.innerText = properties[index].revenue;
-    expensesText.innerText = properties[index].expenses;
-    priceText.innerText = properties[index].price.toFixed(2);
+    revenueText.innerText = formatNumber(properties[index].revenue);
+    expensesText.innerText = formatNumber(properties[index].expenses);
+    priceText.innerText = formatNumber(properties[index].price.toFixed(2));
     text.innerText = properties[index].text;
     checkOwnership();
     updateStats();

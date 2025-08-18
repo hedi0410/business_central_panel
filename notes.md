@@ -1,12 +1,7 @@
 To add: 
 
-Fluctuations with the assets.
-
-Money loop linked to real time.
+debt and interest.
 A save game function.
-
-Human readable money (commas, Ms)
-Better layout
 ------
 
 Game Plan: 
@@ -15,12 +10,4 @@ You can buy a business, manage it and sell it.
 
 You can buy or sell assets.
 
-The Overview window calculates money by the hour.
-
 The goal of the game is to make money.
-
-----
-Ideas:
-
-Bank :
-Unlocking a better bank will give you better interest rates on loans and savings.

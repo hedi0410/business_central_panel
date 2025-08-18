@@ -1,4 +1,4 @@
-import { player, game, updateStats, loadSection, immortal, catcoffee, renaissance, beyond, deluxo, n2n, cloudPush } from './index.js';
+import { player, game, updateStats, loadSection, formatNumber, immortal, catcoffee, renaissance, beyond, deluxo, n2n, cloudPush } from './index.js';
 
 const goBusinessButton1 = document.getElementById('goBusinessButton1');
 const goBusinessButton2 = document.getElementById('goBusinessButton2');
@@ -103,10 +103,10 @@ function buyBusiness(index) {
 function businessOverview(index) {
     businessNameText.innerText = player.businesses[index].name;
     businessTypeText.innerText = player.businesses[index].type;
-    businessPriceText.innerText = player.businesses[index].returnPrice();
-    businessRevenueText.innerText = player.businesses[index].returnRevenue();
-    businessExpensesText.innerText = player.businesses[index].returnExpenses();
-    businessProfitText.innerText = player.businesses[index].returnProfit();
+    businessPriceText.innerText = formatNumber(player.businesses[index].returnPrice());
+    businessRevenueText.innerText = formatNumber(player.businesses[index].returnRevenue());
+    businessExpensesText.innerText = formatNumber(player.businesses[index].returnExpenses());
+    businessProfitText.innerText = formatNumber(player.businesses[index].returnProfit());
     if (player.businesses[index].returnProfit() < 0) {
             businessProfitText.style.color = "red";
         } else {
@@ -117,10 +117,10 @@ function businessOverview(index) {
 function businessOverview2(index) {
     businessNameText2.innerText = game.businesses[index].name;
     businessTypeText2.innerText = game.businesses[index].type;
-    businessPriceText2.innerText = game.businesses[index].returnPrice();
-    businessRevenueText2.innerText = game.businesses[index].returnRevenue();
-    businessExpensesText2.innerText = game.businesses[index].returnExpenses();
-    businessProfitText2.innerText = game.businesses[index].returnProfit();
+    businessPriceText2.innerText = formatNumber(game.businesses[index].returnPrice());
+    businessRevenueText2.innerText = formatNumber(game.businesses[index].returnRevenue());
+    businessExpensesText2.innerText = formatNumber(game.businesses[index].returnExpenses());
+    businessProfitText2.innerText = formatNumber(game.businesses[index].returnProfit());
     if (game.businesses[index].returnProfit() < 0) {
             businessProfitText2.style.color = "red";
         } else {

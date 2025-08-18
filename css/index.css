@@ -109,3 +109,45 @@ a {
 #changeName {
     margin-left: 15px;
 }
+#buttonNav7 {
+    background-color: #010f22;
+
+    color: #f82c6d;
+    font-size: 17px;
+    font-weight: normal;
+    font-family: 'Rajdhani', sans-serif;
+
+    border: solid 2px lightgrey;
+    border-radius: 10px;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* mobile & comptability */
+
+@media (max-width: 768px) {
+    .device_1 {
+        min-width: 90%;
+        max-width: 90%;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    #buttonNav7:hover {
+        background: border-box radial-gradient(rgb(63, 63, 63), #010f22);
+    }
+    #buttonNav1:hover, #buttonNav2:hover, #buttonNav3:hover, #buttonNav4:hover, #buttonNav5:hover, #buttonNav6:hover {
+        background: border-box radial-gradient(#bd768a, #9c2f41);
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    #buttonNav7:active {
+        background: border-box radial-gradient(rgb(63, 63, 63), #010f22);
+    }
+    #buttonNav1:active, #buttonNav2:active, #buttonNav3:active, #buttonNav4:active, #buttonNav5:active, #buttonNav6:active {
+        background: border-box radial-gradient(#bd768a, #9c2f41);
+    }
+}
+

@@ -1,0 +1,11 @@
+header {
+    text-align: center;
+}
+.container {
+    border: solid 2px lightgrey;
+    border-radius: 15px;
+    gap: 20px;
+    justify-items: space-between;
+    padding: 10px;
+    margin: 10px;
+}

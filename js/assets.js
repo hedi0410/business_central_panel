@@ -1,4 +1,4 @@
-import { player, updateStats } from './index.js';
+import { player, updateStats, formatNumber } from './index.js';
 import { assets } from './assetsArray.js';
 
 const buttonAssets1 = document.getElementById('buttonAssets1');
@@ -20,7 +20,7 @@ update(index);
 
 function update(index) {
     assetNameText.innerText = assets[index].name;
-    priceText.innerText = assets[index].price.toFixed(2);
+    priceText.innerText = formatNumber(assets[index].price.toFixed(2));
     text.innerText = assets[index].text;
     checkOwnership();
     updateStats();

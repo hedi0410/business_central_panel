@@ -1,4 +1,4 @@
-import { player, updateStats, game, loadSection } from './index.js';
+import { player, updateStats, game, loadSection, formatNumber } from './index.js';
 
 const currentBusiness = player.currentBusiness;
 
@@ -83,16 +83,16 @@ function changeName() {
 function businessOverview(index) {
     businessNameText.innerText = player.businesses[index].name;
     businessTypeText.innerText = player.businesses[index].type;
-    businessPriceText.innerText = player.businesses[index].returnPrice();
-    businessRevenueText.innerText = player.businesses[index].returnRevenue();
-    businessExpensesText.innerText = player.businesses[index].returnExpenses();
-    businessProfitText.innerText = player.businesses[index].returnProfit();
+    businessPriceText.innerText = formatNumber(player.businesses[index].returnPrice());
+    businessRevenueText.innerText = formatNumber(player.businesses[index].returnRevenue());
+    businessExpensesText.innerText = formatNumber(player.businesses[index].returnExpenses());
+    businessProfitText.innerText = formatNumber(player.businesses[index].returnProfit());
     if (player.businesses[index].returnProfit() < 0) {
             businessProfitText.style.color = "red";
         } else {
             businessProfitText.style.color = "green";
         }
 
-	businessMoneyText.innerText = Number(player.businesses[index].money.toFixed(2));
+	businessMoneyText.innerText = formatNumber(player.businesses[index].money.toFixed(2));
 }
 

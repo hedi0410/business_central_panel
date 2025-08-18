@@ -1,4 +1,4 @@
-import { player, updateStats, game } from './index.js'; //immortal, catcoffee, renaissance, beyond, deluxo, n2n, cloudPush
+import { player, updateStats, game, formatNumber } from './index.js'; //immortal, catcoffee, renaissance, beyond, deluxo, n2n, cloudPush
 import { personalAssets } from './personalAssetsArray.js';
 
 const buttonAssets1 = document.getElementById('buttonAssets1');
@@ -20,7 +20,7 @@ update(index);
 
 function update(index) {
     assetNameText.innerText = personalAssets[index].name;
-    priceText.innerText = personalAssets[index].price;
+    priceText.innerText = formatNumber(personalAssets[index].price);
     text.innerText = personalAssets[index].text;
     checkOwnership();
     updateStats();

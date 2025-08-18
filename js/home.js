@@ -1,4 +1,4 @@
-import { player, returnMoney, updateStats } from './index.js';
+import { player, returnMoney, updateStats, formatNumber } from './index.js';
 
 const moneyText = document.getElementById('moneyText');
 const revenueText = document.getElementById('revenueText');
@@ -17,7 +17,7 @@ autoUpdateStatsHome();
 
 // updates
 function updateStatsHome() {
-    moneyText.innerText = Number(player.money.toFixed(2));
+    moneyText.innerText = formatNumber(player.money.toFixed(2));
     if (player.money < 0) {
             moneyText.style.color = "red";
         } else {
