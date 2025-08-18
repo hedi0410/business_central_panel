@@ -29,17 +29,8 @@ function update(index) {
 function buyAsset(index) {
     if (player.money >= personalAssets[index].price) {
         player.money -= personalAssets[index].price;
-        player.personalAssets.push(personalAssets[index]);
         getBonus(index);
-    }
-    update(index);
-}
-
-function sellAsset(index) {
-    const playerAssetIndex = player.personalAssets.indexOf(personalAssets[index]);
-    if (playerAssetIndex !== -1) {
-        player.personalAssets.splice(playerAssetIndex, 1);
-        player.money += personalAssets[index].price;
+        player.personalAssets.push(personalAssets[index]);
     }
     update(index);
 }
@@ -47,13 +38,12 @@ function sellAsset(index) {
 function checkOwnership() {
     if (player.personalAssets.includes(personalAssets[index])) {
         buttonAssets2.innerText = "Sell";
-        buttonAssets2.style.display = "none";
+        buttonAssets2.disabled = true;
         ownershipText.innerText = "Owned";
         ownershipText.style.color = "green";
-        buttonAssets2.onclick = () => sellAsset(index);
     } else {
         buttonAssets2.innerText = "Buy";
-        buttonAssets2.style.display = "inline-block";
+        buttonAssets2.disabled = false;
         ownershipText.innerText = "Not Owned";
         ownershipText.style.color = "red";
         buttonAssets2.onclick = () => buyAsset(index);
@@ -75,13 +65,10 @@ function previousAsset() {
 }
 
 // Bonus
-
 function getBonus(bonus) {
-    const bonusPercent = player.personalAssets[bonus].bonus;
-
     for (let i = 0; i < game.businesses.length; i++) {
         if (game.businesses[i]) {
-            game.businesses[i].price -= game.businesses[i].price * (bonusPercent / 100);
+            game.businesses[i].price -= game.businesses[i].price * (personalAssets[bonus].bonus / 100);
         }
     }
 }
