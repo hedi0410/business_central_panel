@@ -72,31 +72,11 @@ function goHome() {
     loadSection('home');
 }
 
-// pretty repetitive but couldn't figure out a better way
 function generateMoney() {
-    if (player.businesses[0]) {
-    player.businesses[0].money += player.businesses[0].returnProfit() / 3600;
-    }
-    if (player.businesses[1]) {
-    player.businesses[1].money += player.businesses[1].returnProfit() / 3600;
-    }
-    if (player.businesses[2]) {
-    player.businesses[2].money += player.businesses[2].returnProfit() / 3600;
-    }
-    if (player.businesses[3]) {
-    player.businesses[3].money += player.businesses[3].returnProfit() / 3600;
-    }
-    if (player.businesses[4]) {
-    player.businesses[4].money += player.businesses[4].returnProfit() / 3600;
-    }
-    if (player.businesses[5]) {
-    player.businesses[5].money += player.businesses[5].returnProfit() / 3600;
-    }
-    if (player.businesses[6]) {
-    player.businesses[6].money += player.businesses[6].returnProfit() / 3600;
-    }
-    if (player.businesses[7]) {
-    player.businesses[7].money += player.businesses[7].returnProfit() / 3600;
+    for (let i = 0; i < player.businesses.length; i++) {
+        if (player.businesses[i]) {
+        player.businesses[i].money += player.businesses[i].returnProfit() / 3600;
+        }
     }
 }
 

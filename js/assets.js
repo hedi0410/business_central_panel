@@ -19,7 +19,6 @@ checkOwnership();
 update(index);
 
 function update(index) {
-    //buttonAssets2.onclick = ;
     assetNameText.innerText = assets[index].name;
     priceText.innerText = assets[index].price;
     text.innerText = assets[index].text;

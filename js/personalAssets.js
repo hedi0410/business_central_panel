@@ -19,7 +19,6 @@ checkOwnership();
 update(index);
 
 function update(index) {
-    //buttonAssets2.onclick = ;
     assetNameText.innerText = personalAssets[index].name;
     priceText.innerText = personalAssets[index].price;
     text.innerText = personalAssets[index].text;
@@ -31,6 +30,7 @@ function buyAsset(index) {
     if (player.money >= personalAssets[index].price) {
         player.money -= personalAssets[index].price;
         player.personalAssets.push(personalAssets[index]);
+        getBonus(index);
     }
     update(index);
 }
@@ -76,6 +76,12 @@ function previousAsset() {
 
 // Bonus
 
-function test() {
-    
+function getBonus(bonus) {
+    const bonusPercent = player.personalAssets[bonus].bonus;
+
+    for (let i = 0; i < game.businesses.length; i++) {
+        if (game.businesses[i]) {
+            game.businesses[i].price -= game.businesses[i].price * (bonusPercent / 100);
+        }
+    }
 }
