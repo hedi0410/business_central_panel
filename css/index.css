@@ -98,7 +98,7 @@ a {
     font-size: 16px;
 }
 #buttonNav3 {
-    display: none;
+    display: inline-block;
 }
 #buttonNav5 {
     display: inline-block;

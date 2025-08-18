@@ -9,3 +9,19 @@ header {
     padding: 10px;
     margin: 10px;
 }
+#buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+}
+#buttons button {
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 5px;
+}
+#ownershipText {
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+}
