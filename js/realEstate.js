@@ -7,6 +7,8 @@ const buttonAssets3 = document.getElementById('buttonAssets3');
 
 const ownershipText = document.getElementById('ownershipText');
 const propertyNameText = document.getElementById('propertyNameText');
+const revenueText = document.getElementById('revenueText');
+const expensesText = document.getElementById('expensesText');
 const priceText = document.getElementById('priceText');
 const text = document.getElementById('text');
 
@@ -20,6 +22,8 @@ update(index);
 
 function update(index) {
     propertyNameText.innerText = properties[index].name;
+    revenueText.innerText = properties[index].revenue;
+    expensesText.innerText = properties[index].expenses;
     priceText.innerText = properties[index].price.toFixed(2);
     text.innerText = properties[index].text;
     checkOwnership();
@@ -29,6 +33,8 @@ function update(index) {
 function buyProperty(index) {
     if (player.money >= properties[index].price) {
         player.money -= properties[index].price;
+        player.revenue += properties[index].revenue;
+        player.expenses += properties[index].expenses;
         player.properties.push(properties[index]);
     }
     update(index);
@@ -37,6 +43,8 @@ function buyProperty(index) {
 function sellProperty(index) {
     const playerPropertyIndex = player.properties.indexOf(properties[index]);
     if (playerPropertyIndex !== -1) {
+        player.revenue -= player.properties[playerPropertyIndex].revenue;
+        player.expenses -= player.properties[playerPropertyIndex].expenses;
         player.properties.splice(playerPropertyIndex, 1);
         player.money += properties[index].price;
     }
