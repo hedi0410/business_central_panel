@@ -1,4 +1,4 @@
-import { player, updateStats } from './index.js';
+import { player, updateStats, game } from './index.js'; //immortal, catcoffee, renaissance, beyond, deluxo, n2n, cloudPush
 import { personalAssets } from './personalAssetsArray.js';
 
 const buttonAssets1 = document.getElementById('buttonAssets1');
@@ -47,11 +47,13 @@ function sellAsset(index) {
 function checkOwnership() {
     if (player.personalAssets.includes(personalAssets[index])) {
         buttonAssets2.innerText = "Sell";
+        buttonAssets2.style.display = "none";
         ownershipText.innerText = "Owned";
         ownershipText.style.color = "green";
         buttonAssets2.onclick = () => sellAsset(index);
     } else {
         buttonAssets2.innerText = "Buy";
+        buttonAssets2.style.display = "inline-block";
         ownershipText.innerText = "Not Owned";
         ownershipText.style.color = "red";
         buttonAssets2.onclick = () => buyAsset(index);
@@ -70,4 +72,10 @@ function previousAsset() {
         index -= 1;
         update(index);
     }
+}
+
+// Bonus
+
+function test() {
+    
 }
