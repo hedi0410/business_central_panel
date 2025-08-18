@@ -80,6 +80,7 @@ function generateMoney() {
         player.businesses[i].money += player.businesses[i].returnProfit() / 3600;
         }
     }
+    player.money += player.returnProfit() / 3600;
 }
 
 export function returnMoney() {
