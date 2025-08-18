@@ -27,6 +27,6 @@ export const personalAssets = [
         name: "Private Jet",
         price: 9000000,
         bonus: 5,
-        text: "A very fast and comfortable private jet. If you own this, you officialy made it. -5% in all base businesses price."
+        text: "A very fast and comfortable private jet. -5% in all base businesses price."
     }
 ]
