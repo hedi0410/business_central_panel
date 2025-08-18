@@ -24,6 +24,12 @@ export const personalAssets = [
         text: "A spotless dream on wheels. -3% in all base businesses price."
     },
     {
+        name: "City Center Appartment",
+        price: 2490000,
+        bonus: 5,
+        text: "A penthouse in the city center. -5% in all base businesses price."
+    },
+    {
         name: "Private Jet",
         price: 9000000,
         bonus: 5,
