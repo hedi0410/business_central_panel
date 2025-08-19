@@ -7,13 +7,6 @@ export const properties = [
         text: "An appartment situated in the city outskirts."
     },
     {
-        name: "Appartment with garage",
-        price: 860000,
-        revenue: 1160,
-        expenses: 670,
-        text: "A small appartment close to the highway."
-    },
-    {
         name: "Small town House",
         price: 140000,
         revenue: 2360,
@@ -26,6 +19,13 @@ export const properties = [
         revenue: 6100,
         expenses: 3500,
         text: "The dream of many families."
+    },
+    {
+        name: "Appartment with garage",
+        price: 860000,
+        revenue: 1160,
+        expenses: 670,
+        text: "A small appartment close to the highway."
     },
     {
         name: "High-end Appartment",
