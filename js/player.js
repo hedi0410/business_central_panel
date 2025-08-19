@@ -1,7 +1,7 @@
 export class Player {
     constructor(name) {
         this.name = name;
-        this.money = 2000000;
+        this.money = 20000;
         this.revenue = 0;
         this.expenses = 0;
         this.debt = 0;
